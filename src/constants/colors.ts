@@ -3,4 +3,5 @@ export const COLORS = {
   black_text: '#414141',
   lavender: '#5267D3',
   lighterGray: '#CCCCCC',
+  mistgray: '#E8E8E8',
 };

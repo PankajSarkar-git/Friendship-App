@@ -22,10 +22,10 @@ export const styles = StyleSheet.create({
     borderColor: 'white',
   },
   seenStory: {
-    backgroundColor: 'blue',
+    backgroundColor: COLORS.lighterGray,
   },
   unseenStory: {
-    backgroundColor: COLORS.lighterGray,
+    backgroundColor: 'blue',
   },
   innerCircle: {
     justifyContent: 'center',
