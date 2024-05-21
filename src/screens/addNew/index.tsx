@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const NewPost = () => {
+const AddNew = () => {
   return (
     <View>
       <Text>NewPost</Text>
@@ -9,4 +9,4 @@ const NewPost = () => {
   );
 };
 
-export default NewPost;
+export default AddNew;
