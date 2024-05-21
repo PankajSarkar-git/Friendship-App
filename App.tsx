@@ -1,12 +1,8 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import StackNavigate from './src/routes/stackNavigate';
 
 const App = () => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  );
+  return <StackNavigate />;
 };
 
 export default App;
