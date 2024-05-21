@@ -15,9 +15,15 @@ interface storyProps {
   story?: boolean;
   seen?: boolean;
   img?: string;
+  name?: string;
 }
 
-const Story: React.FC<storyProps> = ({story = true, seen = false, img}) => {
+const Story: React.FC<storyProps> = ({
+  story = true,
+  seen = false,
+  name = 'You',
+  img,
+}) => {
   return (
     <TouchableOpacity style={styles.container}>
       <View
@@ -38,7 +44,7 @@ const Story: React.FC<storyProps> = ({story = true, seen = false, img}) => {
         </View>
       </View>
       <TextCustom color={COLORS.black_text} customStyle={textStyles.fs_600_14}>
-        Jiya
+        {name}
       </TextCustom>
     </TouchableOpacity>
   );
