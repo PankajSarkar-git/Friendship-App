@@ -8,8 +8,20 @@ const Bottom = createBottomTabNavigator();
 const BottomNavigator = () => {
   return (
     <Bottom.Navigator>
-      <Bottom.Screen name="Home" component={Home} />
-      <Bottom.Screen name="Notification" component={Notification} />
+      <Bottom.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Bottom.Screen
+        name="Notification"
+        component={Notification}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Bottom.Navigator>
   );
 };
