@@ -2,7 +2,6 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../../screens/home';
-import Notification from '../../screens/notification';
 import HomeSvg from '../../assets/navigationSvg/HomeSvg';
 import ActiveHomeSvg from '../../assets/navigationSvg/ActiveHomeSvg';
 import sizer from '../../helper/sizer';
@@ -14,143 +13,87 @@ import SearchSvg from '../../assets/navigationSvg/SearchSvg';
 import ActiveNewpostsvg from '../../assets/navigationSvg/ActiveNewpostSvg';
 import NewpostSvg from '../../assets/navigationSvg/NewpostSvg';
 import Search from '../../screens/search';
-import NewPost from '../../screens/newPost';
 import Chats from '../../screens/chats';
 import ActiveChatSvg from '../../assets/navigationSvg/ActiveChatSvg';
 import ChatSvg from '../../assets/navigationSvg/ChatSvg';
 import Profile from '../../screens/profile';
 import ActiveProfileSvg from '../../assets/navigationSvg/ActiveProfileSvg';
 import ProfileSvg from '../../assets/navigationSvg/ProfileSvg';
+import ActiveBar from '../../assets/navigationSvg/ActiveBar';
+import AddNew from '../../screens/addNew';
+
+
+
+
+
+
+
+
+
 const Bottom = createBottomTabNavigator();
+
+const tabConfig = [
+  {
+    name: 'Home',
+    component: Home,
+    icon: <HomeSvg size={sizer.horizontalScale(24)} />,
+    activeIcon: <ActiveHomeSvg size={sizer.horizontalScale(24)} />,
+  },
+  {
+    name: 'Search',
+    component: Search,
+    icon: <SearchSvg size={sizer.horizontalScale(24)} />,
+    activeIcon: <ActiveSearchSvg size={sizer.horizontalScale(24)} />,
+  },
+  {
+    name: 'AddPost',
+    component: AddNew,
+    icon: <NewpostSvg size={sizer.horizontalScale(24)} />,
+    activeIcon: <ActiveNewpostsvg size={sizer.horizontalScale(24)} />,
+  },
+  {
+    name: 'Chats',
+    component: Chats,
+    icon: <ChatSvg size={sizer.horizontalScale(24)} />,
+    activeIcon: <ActiveChatSvg size={sizer.horizontalScale(24)} />,
+  },
+  {
+    name: 'Profile',
+    component: Profile,
+    icon: <ProfileSvg size={sizer.horizontalScale(24)} />,
+    activeIcon: <ActiveProfileSvg size={sizer.horizontalScale(24)} />,
+  },
+];
 
 const BottomNavigator = () => {
   return (
-    <Bottom.Navigator>
-      <Bottom.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-          tabBarLabel: ({focused}) => {
-            return (
-              <View style={styles.container}>
-                <View>
-                  {focused ? (
-                    <ActiveHomeSvg size={sizer.horizontalScale(24)} />
-                  ) : (
-                    <HomeSvg size={sizer.horizontalScale(24)} />
-                  )}
+    <Bottom.Navigator
+      screenOptions={{
+        tabBarStyle: [styles.mainContainer, null],
+      }}>
+      {tabConfig.map(({name, component, icon, activeIcon}, index) => (
+        <Bottom.Screen
+          name={name}
+          component={component}
+          key={index}
+          options={{
+            headerShown: false,
+            tabBarLabel: ({focused}) => {
+              return (
+                <View style={styles.container}>
+                  {focused && <ActiveBar />}
+                  <View style={styles.logo}>{focused ? activeIcon : icon}</View>
+                  <TextCustom
+                    style={[{color: focused ? '#5267D3' : '#808080'}]}
+                    customStyle={textStyles.fs_600_10}>
+                    {name}
+                  </TextCustom>
                 </View>
-                <TextCustom
-                  style={[{color: focused ? '#5267D3' : '#808080'}]}
-                  customStyle={textStyles.fs_600_10}>
-                  Home
-                </TextCustom>
-              </View>
-            );
-          },
-        }}
-      />
-      <Bottom.Screen
-        name="Search"
-        component={Search}
-        options={{
-          headerShown: false,
-          tabBarLabel: ({focused}) => {
-            return (
-              <View style={styles.container}>
-                <View>
-                  {focused ? (
-                    <ActiveSearchSvg size={sizer.horizontalScale(24)} />
-                  ) : (
-                    <SearchSvg size={sizer.horizontalScale(24)} />
-                  )}
-                </View>
-                <TextCustom
-                  style={[{color: focused ? '#5267D3' : '#808080'}]}
-                  customStyle={textStyles.fs_600_10}>
-                  Search
-                </TextCustom>
-              </View>
-            );
-          },
-        }}
-      />
-      <Bottom.Screen
-        name="NewPost"
-        component={NewPost}
-        options={{
-          headerShown: false,
-          tabBarLabel: ({focused}) => {
-            return (
-              <View style={styles.container}>
-                <View>
-                  {focused ? (
-                    <ActiveNewpostsvg size={sizer.horizontalScale(24)} />
-                  ) : (
-                    <NewpostSvg size={sizer.horizontalScale(24)} />
-                  )}
-                </View>
-                <TextCustom
-                  style={[{color: focused ? '#5267D3' : '#808080'}]}
-                  customStyle={textStyles.fs_600_10}>
-                  New Post
-                </TextCustom>
-              </View>
-            );
-          },
-        }}
-      />
-      <Bottom.Screen
-        name="Chats"
-        component={Chats}
-        options={{
-          headerShown: false,
-          tabBarLabel: ({focused}) => {
-            return (
-              <View style={styles.container}>
-                <View>
-                  {focused ? (
-                    <ActiveChatSvg size={sizer.horizontalScale(24)} />
-                  ) : (
-                    <ChatSvg size={sizer.horizontalScale(24)} />
-                  )}
-                </View>
-                <TextCustom
-                  style={[{color: focused ? '#5267D3' : '#808080'}]}
-                  customStyle={textStyles.fs_600_10}>
-                  Chats
-                </TextCustom>
-              </View>
-            );
-          },
-        }}
-      />
-      <Bottom.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          headerShown: false,
-          tabBarLabel: ({focused}) => {
-            return (
-              <View style={styles.container}>
-                <View>
-                  {focused ? (
-                    <ActiveProfileSvg size={sizer.horizontalScale(24)} />
-                  ) : (
-                    <ProfileSvg size={sizer.horizontalScale(24)} />
-                  )}
-                </View>
-                <TextCustom
-                  style={[{color: focused ? '#5267D3' : '#808080'}]}
-                  customStyle={textStyles.fs_600_10}>
-                  Profile
-                </TextCustom>
-              </View>
-            );
-          },
-        }}
-      />
+              );
+            },
+          }}
+        />
+      ))}
     </Bottom.Navigator>
   );
 };
