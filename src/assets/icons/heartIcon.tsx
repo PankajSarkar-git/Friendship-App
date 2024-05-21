@@ -12,7 +12,7 @@ interface IconProps {
 const HeartIcon: React.FC<IconProps> = ({
   liked = false,
   width = sizer.horizontalScale(24),
-  height = sizer.horizontalScale(24),
+  height = sizer.horizontalScale(20),
   color = '#F44336',
 }) => {
   return (

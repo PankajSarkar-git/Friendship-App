@@ -58,6 +58,7 @@ const Home = () => {
       <View style={styles.postContainer}>
         {postData.map((item, idx) => (
           <PostCard
+            key={`post ${idx}`}
             name={item.name}
             location={item.location}
             postmedia={item.image_url}

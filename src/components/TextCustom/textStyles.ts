@@ -6,7 +6,7 @@ export const textStyles = StyleSheet.create({
     fontFamily: 'OpenSans-SemiBold',
     fontSize: sizer.fontScale(14),
     fontWeight: '600',
-    lineHeight: sizer.horizontalScale(16),
+    lineHeight: sizer.horizontalScale(18),
   },
   fs_600_16: {
     fontFamily: 'OpenSans-SemiBold',

@@ -41,9 +41,31 @@ export const styles = StyleSheet.create({
     width: '100%',
     marginVertical: sizer.horizontalScale(10),
   },
+  desc: {flex: 1, justifyContent: 'center'},
+  textContainer: {
+    flexDirection: 'row',
+    // alignItems: 'center',
+    flexWrap: 'wrap',
+  },
+  text: {
+    fontSize: 16,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+  },
+  ellipsis: {
+    fontWeight: 'bold',
+  },
+  more: {
+    padding: 0,
+    color: 'blue',
+  },
+  buttonContainer: {
+    marginTop: -4, // Adjust the value as needed
+  },
   bottomContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: sizer.horizontalScale(12),
   },
   iconText: {
     flexDirection: 'row',
