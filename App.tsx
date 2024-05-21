@@ -1,13 +1,10 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import Home from './src/screens/home';
+
+import StackNavigate from './src/routes/stackNavigate';
 
 const App = () => {
-  return (
-    <View style={{flex: 1}}>
-      <Home />
-    </View>
-  );
+  return <StackNavigate />;
+
 };
 
 export default App;
