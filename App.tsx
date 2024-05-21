@@ -1,10 +1,11 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import Home from './src/screens/home';
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View style={{flex: 1}}>
+      <Home />
     </View>
   );
 };
