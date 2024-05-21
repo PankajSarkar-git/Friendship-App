@@ -2,6 +2,12 @@ import {StyleSheet} from 'react-native';
 import sizer from '../../helper/sizer';
 
 export const textStyles = StyleSheet.create({
+  fs_600_10: {
+    fontFamily: 'OpenSans-SemiBold',
+    fontSize: sizer.fontScale(10),
+    fontWeight: '600',
+    lineHeight: sizer.horizontalScale(14),
+  },
   fs_600_14: {
     fontFamily: 'OpenSans-SemiBold',
     fontSize: sizer.fontScale(14),
