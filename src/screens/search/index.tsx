@@ -25,14 +25,13 @@ const Search = () => {
     events: false,
   });
 
-  const handleSlide = (slide: any) => {
+  const handleSlide = slide => {
     setActiveSlide(slide);
   };
 
   const handleSearch = () => {
     console.log('searching....');
   };
-
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
