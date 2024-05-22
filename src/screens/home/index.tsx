@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
   },
 
   storyCollection: {
+    marginTop: sizer.horizontalScale(12),
     paddingHorizontal: sizer.horizontalScale(8),
     marginVertical: sizer.horizontalScale(6),
   },
