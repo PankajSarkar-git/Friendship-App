@@ -8,4 +8,6 @@ export const COLORS = {
   borderColor: '#E8E8E8',
   pageBackGround: '#FFF',
   blue : '#5267D3',
+  green : '#00DE00',
+  yellow : '#FFD700',
 };
