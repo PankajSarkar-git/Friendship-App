@@ -5,7 +5,13 @@ export const textStyles = StyleSheet.create({
   fs_600_10: {
     fontFamily: 'OpenSans-SemiBold',
     fontSize: sizer.fontScale(10),
-    fontWeight: '600',
+    fontWeight: '700',
+    lineHeight: sizer.horizontalScale(13),
+  },
+  fs_400_12: {
+    fontFamily: 'OpenSans-SemiBold',
+    fontSize: sizer.fontScale(12),
+    fontWeight: '400',
     lineHeight: sizer.horizontalScale(14),
   },
   fs_600_14: {
@@ -14,10 +20,22 @@ export const textStyles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: sizer.horizontalScale(18),
   },
+  fs_400_14: {
+    fontFamily: 'OpenSans-SemiBold',
+    fontSize: sizer.fontScale(14),
+    fontWeight: '400',
+    lineHeight: sizer.horizontalScale(18),
+  },
   fs_600_16: {
     fontFamily: 'OpenSans-SemiBold',
     fontSize: sizer.fontScale(16),
     fontWeight: '600',
+    lineHeight: sizer.horizontalScale(18),
+  },
+  fs_700_16: {
+    fontFamily: 'OpenSans-SemiBold',
+    fontSize: sizer.fontScale(16),
+    fontWeight: '700',
     lineHeight: sizer.horizontalScale(18),
   },
   fs_600_20: {
