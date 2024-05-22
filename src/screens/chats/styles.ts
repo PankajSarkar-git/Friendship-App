@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   notificationContainer: {
     borderBottomWidth: sizer.horizontalScale(1),
     borderColor: COLORS.borderColor,
-    marginTop : sizer.horizontalScale(12),
+    marginTop: sizer.horizontalScale(12),
   },
   headdingText: {
     fontFamily: 'Open Sans',
