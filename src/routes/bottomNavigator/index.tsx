@@ -22,14 +22,6 @@ import ProfileSvg from '../../assets/navigationSvg/ProfileSvg';
 import ActiveBar from '../../assets/navigationSvg/ActiveBar';
 import AddNew from '../../screens/addNew';
 
-
-
-
-
-
-
-
-
 const Bottom = createBottomTabNavigator();
 
 const tabConfig = [

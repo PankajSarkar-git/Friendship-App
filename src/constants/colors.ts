@@ -4,4 +4,8 @@ export const COLORS = {
   lavender: '#5267D3',
   lighterGray: '#CCCCCC',
   mistgray: '#E8E8E8',
+  lightText: '#808080',
+  borderColor: '#E8E8E8',
+  pageBackGround: '#FFF',
+  blue : '#5267D3',
 };
