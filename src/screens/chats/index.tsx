@@ -1,13 +1,17 @@
 import {View, Text, TextInput, SafeAreaView, ScrollView} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/Header';
 import SearchIcon from '../../assets/icons/searchIcon';
 import {styles} from './styles';
 import {textStyles} from '../../components/TextCustom/textStyles';
 import ChatItem from '../../components/chatItem';
-import {chatData} from '../../data';
+import {callData, chatData} from '../../data';
+import StoryCollection from '../../components/stroyCollection';
+import ToggleButton from '../../components/toggleButton';
+
 
 const Chats = () => {
+  const [showCall, setShowCall] = useState<Boolean>(false);
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -22,12 +26,29 @@ const Chats = () => {
             returnKeyType="search"
           />
         </View>
-        <ScrollView style={styles.scroll} scrollEnabled={true}  showsVerticalScrollIndicator={false}>
-          <View>
-            {chatData.map(item => (
-              <ChatItem item={item} key={item.id} />
-            ))}
-          </View>
+        <View>
+          <StoryCollection />
+        </View>
+        <View style={styles.toggleButton}>
+          <ToggleButton showCall={showCall} setShowCall={setShowCall} />
+        </View>
+        <ScrollView
+          style={styles.scroll}
+          scrollEnabled={true}
+          showsVerticalScrollIndicator={false}>
+          {showCall ? (
+            <View>
+              {callData.map(item => (
+                <ChatItem showCall={showCall} item={item} key={item.id} />
+              ))}
+            </View>
+          ) : (
+            <View>
+              {chatData.map(item => (
+                <ChatItem showCall={showCall} item={item} key={item.id} />
+              ))}
+            </View>
+          )}
         </ScrollView>
       </View>
     </SafeAreaView>

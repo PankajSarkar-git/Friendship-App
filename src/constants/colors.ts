@@ -6,8 +6,9 @@ export const COLORS = {
   mistgray: '#E8E8E8',
   lightText: '#808080',
   borderColor: '#E8E8E8',
-  pageBackGround: '#FFF',
+  White : '#FFF',
   blue : '#5267D3',
   green : '#00DE00',
   yellow : '#FFD700',
+  storyBar : '#CCCCCC',
 };

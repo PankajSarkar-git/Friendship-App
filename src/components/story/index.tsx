@@ -10,6 +10,7 @@ import {styles} from './styles';
 import {COLORS} from '../../constants/colors';
 import TextCustom from '../TextCustom';
 import {textStyles} from '../TextCustom/textStyles';
+import { useNavigation } from '@react-navigation/native';
 
 interface storyProps {
   story?: boolean;
@@ -24,8 +25,10 @@ const Story: React.FC<storyProps> = ({
   name = 'You',
   img,
 }) => {
+
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate('Story')}>
       <View
         style={[
           styles.outerCircle,

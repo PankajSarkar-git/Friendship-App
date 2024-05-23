@@ -10,7 +10,7 @@ import {COLORS} from '../../constants/colors';
 import TextCustom from '../TextCustom';
 import {textStyles} from '../TextCustom/textStyles';
 
-const ChatItem = ({item}: any) => {
+const ChatItem = ({item, showCall}: any) => {
   return (
     <View style={styles.container}>
       <View style={styles.infoContainer}>
@@ -43,7 +43,8 @@ const ChatItem = ({item}: any) => {
           <TextCustom
             color={item.isSeen ? COLORS.lightText : COLORS.black_text}
             customStyle={textStyles.fs_600_14}>
-            {item.chat.slice(0, 40)} {item.chat.length > 40 && '...'}
+            {showCall ? item.call : item.chat.slice(0, 40)}{' '}
+            {showCall ? '' : item.chat.length > 40 && '...'}
           </TextCustom>
         </View>
       </View>

@@ -4,7 +4,7 @@ import {COLORS} from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.pageBackGround,
+    backgroundColor: COLORS.White,
   },
   scroll: {
     height: sizer.horizontalScale(734),

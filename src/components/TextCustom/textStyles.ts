@@ -8,6 +8,12 @@ export const textStyles = StyleSheet.create({
     fontWeight: '700',
     lineHeight: sizer.horizontalScale(13),
   },
+  fs_600_12: {
+    fontFamily: 'OpenSans-SemiBold',
+    fontSize: sizer.fontScale(12),
+    fontWeight: '700',
+    lineHeight: sizer.horizontalScale(15),
+  },
   fs_400_12: {
     fontFamily: 'OpenSans-SemiBold',
     fontSize: sizer.fontScale(12),
