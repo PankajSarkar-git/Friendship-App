@@ -28,6 +28,10 @@ export const styles = StyleSheet.create({
     // elevation: 0.2,
     // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   },
+  toggleButton: {
+    paddingHorizontal: sizer.horizontalScale(16),
+    paddingVertical: sizer.horizontalScale(12),
+  },
   scroll: {
     height: sizer.horizontalScale(410),
   },

@@ -65,7 +65,7 @@ const NotificationItem = ({item}: any) => {
           <TouchableOpacity style={styles.acceptButton}>
             <ButtonComponent
               bgColor={COLORS.blue}
-              color={COLORS.pageBackGround}
+              color={COLORS.White}
               borderColor={COLORS.blue}
               Text={'Follow'}
             />
@@ -74,7 +74,7 @@ const NotificationItem = ({item}: any) => {
         {item.followRequst && (
           <TouchableOpacity style={styles.acceptButton}>
             <ButtonComponent
-              bgColor={COLORS.pageBackGround}
+              bgColor={COLORS.White}
               color={COLORS.blue}
               borderColor={COLORS.blue}
               text={'Accept'}
