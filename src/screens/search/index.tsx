@@ -6,6 +6,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   Image,
+  ScrollView,
 } from 'react-native';
 import React, {useState} from 'react';
 import Header from '../../components/Header';
@@ -15,6 +16,7 @@ import {textStyles} from '../../components/TextCustom/textStyles';
 import SearchIcon from '../../assets/icons/searchIcon';
 import TextCustom from '../../components/TextCustom';
 import PostCard from '../../components/postcard';
+import CaptionCard from '../../components/captionCard';
 
 const Search = () => {
   const [activeSlide, setActiveSlide] = useState('top');
@@ -35,10 +37,10 @@ const Search = () => {
   };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Header />
         <View style={styles.searchBox}>
-          <View style={{position: 'absolute', top: 26, left: 28}}>
+          <View style={{position: 'absolute', top: 16, left: 28}}>
             <SearchIcon />
           </View>
           <TextInput
@@ -115,43 +117,36 @@ const Search = () => {
         </View>
 
         {/* .............posts,,,,,,,,,,, */}
-        <View>
-          <View
-            style={{
-              flexDirection: 'row',
-              position: 'relative',
-              justifyContent: 'space-between',
-              paddingHorizontal: sizer.horizontalScale(16),
-            }}>
-            <View
-              style={{
-                position: 'relative',
-                width: '28%',
-                height: 190,
-                borderRadius: sizer.horizontalScale(8),
-                overflow: 'hidden',
-              }}>
-              <Image
-                style={{position: 'absolute', height: '100%', width: '100%'}}
-                source={require('../../assets/img/pic1.png')}
-              />
-            </View>
-            <View
-              style={{
-                position: 'relative',
-                width: '70%',
-                height: 190,
-                borderRadius: sizer.horizontalScale(8),
-                overflow: 'hidden',
-              }}>
-              <Image
-                style={{position: 'absolute', height: '100%', width: '100%'}}
-                source={require('../../assets/img/pic1.png')}
-              />
-            </View>
+        {activeSlide === 'top' && (
+          <>
+            <CaptionCard />
+            <CaptionCard />
+            <CaptionCard />
+            <CaptionCard />
+          </>
+        )}
+
+        {activeSlide === 'user' && (
+          <View>
+            <Text>User</Text>
           </View>
-        </View>
-      </View>
+        )}
+        {activeSlide === 'hashtag' && (
+          <View>
+            <Text>Hashtag</Text>
+          </View>
+        )}
+        {activeSlide === 'post' && (
+          <View>
+            <Text>Post</Text>
+          </View>
+        )}
+        {activeSlide === 'events' && (
+          <View>
+            <Text>Events</Text>
+          </View>
+        )}
+      </ScrollView>
     </TouchableWithoutFeedback>
   );
 };
@@ -163,7 +158,7 @@ const styles = StyleSheet.create({
   searchBox: {
     position: 'relative',
     paddingHorizontal: sizer.horizontalScale(16),
-    paddingVertical: sizer.horizontalScale(14),
+    marginVertical: sizer.horizontalScale(16),
   },
   input: {
     paddingLeft: sizer.horizontalScale(46),
@@ -188,15 +183,19 @@ const styles = StyleSheet.create({
     // paddingHorizontal: sizer.horizontalScale(16),
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 16,
+    marginBottom: 24,
   },
 
   navitem: {position: 'relative'},
-  navText: {paddingHorizontal: 16},
+  navText: {paddingHorizontal: 16, paddingBottom: 12},
   line: {
     width: '100%',
     height: 2,
     backgroundColor: 'blue',
+  },
+  caption: {
+    paddingHorizontal: sizer.horizontalScale(16),
+    marginVertical: sizer.horizontalScale(12),
   },
 });
 
