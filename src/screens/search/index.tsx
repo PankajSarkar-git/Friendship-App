@@ -14,6 +14,7 @@ import {COLORS} from '../../constants/colors';
 import {textStyles} from '../../components/TextCustom/textStyles';
 import SearchIcon from '../../assets/icons/searchIcon';
 import TextCustom from '../../components/TextCustom';
+import PostCard from '../../components/postcard';
 
 const Search = () => {
   const [activeSlide, setActiveSlide] = useState('top');
@@ -114,38 +115,40 @@ const Search = () => {
         </View>
 
         {/* .............posts,,,,,,,,,,, */}
-        <View
-          style={{
-            flexDirection: 'row',
-            position: 'relative',
-            justifyContent: 'space-between',
-            paddingHorizontal: sizer.horizontalScale(16),
-          }}>
+        <View>
           <View
             style={{
+              flexDirection: 'row',
               position: 'relative',
-              width: '28%',
-              height: 190,
-              borderRadius: sizer.horizontalScale(8),
-              overflow: 'hidden',
+              justifyContent: 'space-between',
+              paddingHorizontal: sizer.horizontalScale(16),
             }}>
-            <Image
-              style={{position: 'absolute', height: '100%', width: '100%'}}
-              source={require('../../assets/img/pic1.png')}
-            />
-          </View>
-          <View
-            style={{
-              position: 'relative',
-              width: '70%',
-              height: 190,
-              borderRadius: sizer.horizontalScale(8),
-              overflow: 'hidden',
-            }}>
-            <Image
-              style={{position: 'absolute', height: '100%', width: '100%'}}
-              source={require('../../assets/img/pic1.png')}
-            />
+            <View
+              style={{
+                position: 'relative',
+                width: '28%',
+                height: 190,
+                borderRadius: sizer.horizontalScale(8),
+                overflow: 'hidden',
+              }}>
+              <Image
+                style={{position: 'absolute', height: '100%', width: '100%'}}
+                source={require('../../assets/img/pic1.png')}
+              />
+            </View>
+            <View
+              style={{
+                position: 'relative',
+                width: '70%',
+                height: 190,
+                borderRadius: sizer.horizontalScale(8),
+                overflow: 'hidden',
+              }}>
+              <Image
+                style={{position: 'absolute', height: '100%', width: '100%'}}
+                source={require('../../assets/img/pic1.png')}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -160,7 +163,7 @@ const styles = StyleSheet.create({
   searchBox: {
     position: 'relative',
     paddingHorizontal: sizer.horizontalScale(16),
-    paddingVertical: sizer.horizontalScale(12),
+    paddingVertical: sizer.horizontalScale(14),
   },
   input: {
     paddingLeft: sizer.horizontalScale(46),
@@ -185,7 +188,7 @@ const styles = StyleSheet.create({
     // paddingHorizontal: sizer.horizontalScale(16),
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 16,
   },
 
   navitem: {position: 'relative'},
