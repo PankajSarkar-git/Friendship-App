@@ -26,7 +26,7 @@ const Search = () => {
     events: false,
   });
 
-  const handleSlide = slide => {
+  const handleSlide = (slide: any) => {
     setActiveSlide(slide);
   };
 

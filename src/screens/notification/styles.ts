@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     lineHeight: sizer.lineHeight(20),
     textAlign: 'center',
     color: COLORS.black_text,
+    marginBottom: sizer.horizontalScale(12),
   },
   subHeading: {
     fontFamily: 'Open Sans',
@@ -29,7 +30,7 @@ export const styles = StyleSheet.create({
     lineHeight: sizer.lineHeight(20),
     textAlign: 'left',
     color: COLORS.black_text,
-    marginVertical: sizer.horizontalScale(12),
+    marginBottom: sizer.horizontalScale(12),
     paddingHorizontal: sizer.horizontalScale(16),
   },
 });
