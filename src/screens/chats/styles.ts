@@ -33,6 +33,6 @@ export const styles = StyleSheet.create({
     paddingVertical: sizer.horizontalScale(12),
   },
   scroll: {
-    height: sizer.horizontalScale(410),
+    height: sizer.horizontalScale(430),
   },
 });

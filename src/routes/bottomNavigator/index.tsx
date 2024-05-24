@@ -20,7 +20,8 @@ import Profile from '../../screens/profile';
 import ActiveProfileSvg from '../../assets/navigationSvg/ActiveProfileSvg';
 import ProfileSvg from '../../assets/navigationSvg/ProfileSvg';
 import ActiveBar from '../../assets/navigationSvg/ActiveBar';
-import AddNew from '../../screens/addNew';
+import AddNewRoution from '../addNewRoute';
+
 
 const Bottom = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ const tabConfig = [
   },
   {
     name: 'AddPost',
-    component: AddNew,
+    component: AddNewRoution,
     icon: <NewpostSvg size={sizer.horizontalScale(24)} />,
     activeIcon: <ActiveNewpostsvg size={sizer.horizontalScale(24)} />,
   },
